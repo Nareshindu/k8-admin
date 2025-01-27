@@ -30,9 +30,9 @@ data:
       - system:nodes
       rolearn: arn:aws:iam::796973477223:role/eksctl-expense-nodegroup-expense-NodeInstanceRole-57hxeNJLSisv
       username: system:node:{{EC2PrivateDNSName}}
-   mapUsers: |
+  mapUsers: |
     - groups:
-      - role-grantor-binding
+      - pod-reader
       userarn: arn:aws:iam::796973477223:user/naresh
       username: naresh   
 kind: ConfigMap
