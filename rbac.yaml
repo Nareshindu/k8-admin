@@ -20,4 +20,24 @@ roleRef:
 subjects:
 - apiGroup: rbac.authorization.k8s.io
   kind: User
-  name: naresh  
+  name: naresh
+---
+apiVersion: v1
+data:
+  mapRoles: |
+    - groups:
+      - system:bootstrappers
+      - system:nodes
+      rolearn: arn:aws:iam::796973477223:role/eksctl-expense-nodegroup-expense-NodeInstanceRole-57hxeNJLSisv
+      username: system:node:{{EC2PrivateDNSName}}
+   mapUsers: |
+    - groups:
+      - pod-reader
+      userarn: arn:aws:iam::796973477223:user/naresh
+      username: naresh   
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2025-01-27T15:26:49Z"
+  name: aws-auth
+  namespace: kube-system
+  uid: 2ddbd138-7df6-4d37-88e1-3623745c1677
