@@ -32,7 +32,7 @@ data:
       username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
     - groups:
-      - pod-reader
+      - role-grantor-binding
       userarn: arn:aws:iam::796973477223:user/naresh
       username: naresh   
 kind: ConfigMap
