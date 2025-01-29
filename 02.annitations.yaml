@@ -16,4 +16,9 @@ spec:
   - name: naresh-pod1
     image: naresh34/frontend:v1
     ports: 
-    - containerPort: 80            
+    - containerPort: 80 
+  tolerations:
+  - key: "env"
+    operator: "Equal"
+    value: "dev"
+    effect: "NoSchedule"             
