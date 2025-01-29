@@ -42,10 +42,10 @@ spec:
       requiredDuringSchedulingIgnoredDuringExecution:
         - labelSelector:
             matchExpressions:
-            - key: naresh
+            - key: name
               operator: In
               values:
-              - santhosh
+              - naresh
           topologyKey: topology.kubernetes.io/zone
   containers:
   - name: nginx
