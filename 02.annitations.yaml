@@ -3,11 +3,6 @@ kind: Pod
 metadata:
   name: expense
 spec:
-  containers:  
-  - name: naresh-pod1
-    image: naresh34/frontend:v1
-    ports: 
-    - containerPort: 80  
   affinity:
     nodeAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
@@ -17,3 +12,8 @@ spec:
             operator: In
             values:
             - dev 
+  containers:  
+  - name: naresh-pod1
+    image: naresh34/frontend:v1
+    ports: 
+    - containerPort: 80            
