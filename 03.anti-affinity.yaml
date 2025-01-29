@@ -9,11 +9,12 @@ spec:
     ports: 
     - containerPort: 2 
   affinity:
-    preferredDuringSchedulingIgnoredDuringExecution:
-    - weight: 1
-      preference:
-        matchExpressions:
-        - key: another-node-label-key
-          operator: In
-          values:
-          - another-node-label-value     
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 1
+        preference:
+          matchExpressions:
+          - key: another-node-label-key
+            operator: In
+            values:
+            - another-node-label-value     
