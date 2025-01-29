@@ -18,3 +18,8 @@ spec:
             operator: In
             values:
             - another-node-label-value     
+  tolerations:
+  - key: "env"
+    operator: "Equal"
+    value: "dev"
+    effect: "NoSchedule"  
