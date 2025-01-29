@@ -3,9 +3,9 @@ kind: Pod
 metadata:
   name: expense
 spec:
-  containers:
   nodeSelector:
     env: dev
+  containers:  
   - name: naresh-pod1
     image: naresh34/frontend:v1
     ports: 
