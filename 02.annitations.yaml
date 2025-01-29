@@ -7,9 +7,7 @@ spec:
   - name: naresh-pod1
     image: naresh34/frontend:v1
     ports: 
-    - containerPort: 80
-  nodeSelector:
-    env: dev   
+    - containerPort: 80  
   affinity:
     nodeAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
