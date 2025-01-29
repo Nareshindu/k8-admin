@@ -3,13 +3,13 @@ kind: Pod
 metadata:
   name: expense
 spec:
-  nodeSelector:
-    env: dev
   containers:  
   - name: naresh-pod1
     image: naresh34/frontend:v1
     ports: 
     - containerPort: 80
+  nodeSelector:
+    env: dev   
   affinity:
     nodeAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
