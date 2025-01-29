@@ -8,8 +8,8 @@ spec:
     image: naresh34/frontend:v1
     ports: 
     - containerPort: 80  
-  # tolerations:
-  # - key: "env"
-  #   operator: "Equal"
-  #   value: "dev"
-  #   effect: "NoSchedule"
+  tolerations:
+  - key: "env"
+    operator: "Equal"
+    value: "dev"
+    effect: "NoSchedule"
